@@ -28,14 +28,19 @@
     <div data-role="page" id="foo">
 
         <div data-role="header">
-            <h1>Buildings v7(lucky)</h1>
+            <h1>Buildings v8</h1>
         </div><!-- /header -->
 
         <div data-role="content">
-            <h2>Foo</h2>
-            <p>I'm first in the source order so I'm shown as the page.</p>
-            <p>View internal page called <a href="#bar">bar</a></p>
-            <p>View internal page called <a href="#baz" data-transition="pop">baz</a> as a dialog.</p>
+            <ul data-role="listview" data-inset="true" data-filter="true">
+                <li data-role="list-divider">North</li>
+                <li data-filtertext="2210 Edgar Jones Hall"><a href="#">Jones</a></li>
+                <li><a href="#">Adams</a></li>
+                <li><a href="#">Jackson</a></li>
+                <li data-role="list-divider">South</li>
+                <li><a href="#">Wallace</a></li>
+                <li><a href="#">Ferdinand</a></li>
+            </ul>
         </div><!-- /content -->
 
         <div data-role="footer">
