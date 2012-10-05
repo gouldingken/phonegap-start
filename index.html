@@ -23,41 +23,62 @@
 		
 	</head>
 	<body>
- 		<div id="title_bar"><strong>THE</strong> Sasaki Room Survey Tool</div>
+    <div data-role="page" id="foo">
 
-		<div id="welcome" class="view">
-		  <div class="app_button" id="map_button">Show My Location</div>
-  	      <div class="app_button" id="settings_button">Room Settings</div>
-		</div>
+        <div data-role="header">
+            <h1>Foo</h1>
+        </div><!-- /header -->
 
-		<div id="map" class="view">
-		  <div class="map_image">
-              <img id="static_map" src="assets/img/staticmap.png">
-		  </div>
-		  <p>This is where you are</p>
-		  <div class="app_button" id="welcome_button">Go Back</div>
-		</div>
+        <div data-role="content">
+            <h2>Foo</h2>
+            <p>I'm first in the source order so I'm shown as the page.</p>
+            <p>View internal page called <a href="#bar">bar</a></p>
+            <p>View internal page called <a href="#baz" data-transition="pop">baz</a> as a dialog.</p>
+        </div><!-- /content -->
 
-		<div id="settings" class="view">
-		  <form id="settings_form">
-		    <fieldset>
-		      <legend>Map Type</legend>
-			  <input type="radio" name="map" value="roadmap" checked>Road Map<br/>
-		      <input type="radio" name="map" value="satellite">Satellite<br/>
-		      <input type="radio" name="map" value="terrain">Terrain<br/>
-		      <input type="radio" name="map" value="hybrid">Hybrid<br/>
-		    </fieldset>
-		    <fieldset>
-		      <legend>Zoom Level</legend>
-  		      <input type="radio" name="zoom" value="10">Super Far<br/>
-  		      <input type="radio" name="zoom" value="12">Far<br/>
-  		      <input type="radio" name="zoom" value="15" checked>Normal<br/>
-  		      <input type="radio" name="zoom" value="18">Close<br/>
-  		      <input type="radio" name="zoom" value="20">Super Close<br/>
-  		     </fieldset>
-		      <button id="save_button">Save</button>
-	      </form>
-		</div>
+        <div data-role="footer">
+            <h4>Page Footer</h4>
+        </div><!-- /footer -->
+    </div><!-- /page -->
+
+
+    <!-- Start of second page -->
+    <div data-role="page" id="bar">
+
+        <div data-role="header">
+            <h1>Bar</h1>
+        </div><!-- /header -->
+
+        <div data-role="content">
+            <h2>Bar</h2>
+            <p>I'm the bar page.</p>
+            <p><a href="#foo" data-direction="reverse">Back to foo</a></p>
+        </div><!-- /content -->
+
+        <div data-role="footer">
+            <h4>Page Footer</h4>
+        </div><!-- /footer -->
+    </div><!-- /page -->
+
+
+    <!-- Start of second page -->
+    <div data-role="page" id="baz">
+
+        <div data-role="header">
+            <h1>Baz</h1>
+        </div><!-- /header -->
+
+        <div data-role="content">
+            <h2>Baz</h2>
+            <p>I'm the baz page, viewed as a dialog.</p>
+            <p><a href="#foo" data-rel="back">Back to foo</a></p>
+        </div><!-- /content -->
+
+        <div data-role="footer">
+            <h4>Page Footer</h4>
+        </div><!-- /footer -->
+    </div><!-- /page -->
+    ​
 
 	</body>
 </html>
